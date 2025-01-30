@@ -27,14 +27,14 @@ export const AuthPage = () => {
 
     const registerHandler = async () => {
         try{
-            const data = await request('/api/auth/register', 'POST', {...form})
+            const data = await request('https://todo-app-2xd6.onrender.com/api/auth/register', 'POST', {...form})
             alert(data.message)
         } catch (e) {return e}
     }
 
     const loginHandler = async () => {
         try{
-            const data = await request('/api/auth/login', 'POST', {...form})
+            const data = await request('https://todo-app-2xd6.onrender.com/api/auth/login', 'POST', {...form})
             authA.login(data.token, data.userId, data.userEmail)
         } catch (e) {return e}
     }
