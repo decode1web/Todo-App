@@ -8,19 +8,6 @@ export const HomePage = () => {
     const [title, setTitle] = useState('') // Название проектов
     const [description, setDescription] = useState('') // Описание проекта
 
-    // // Загружаем данные из localStorage при монтировании компонента
-    // useEffect(() => {
-    //     const savedProjects = localStorage.getItem("projects")
-    //     if(savedProjects) {
-    //         setProjects(JSON.parse(savedProjects)) // Парсим сохранённые данные
-    //     }
-    // },[])
-
-    // // Сохраняем данные в localStorage при изменении массива проектов
-    // useEffect(() => {
-    //     localStorage.setItem("projects", JSON.stringify(projects))
-    // },[projects])
-
     // Добавление нового проекта
     const addProject = () => {
         if(!title || !description) {
