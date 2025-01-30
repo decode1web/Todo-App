@@ -8,23 +8,7 @@ export const CreatePage = () => {
     const {request, error, clearError} = useHttp()
     const message = useMessage()
     const [newTask, setNewTask] = useState({ title: '', description: ''})
-    // Полуние задач с сервера
-    // useEffect(() => {
-    //     const fetchTasks = async () => {
-    //         try {
-    //             const response = await fetch('/tasks', {
-    //                 headers: {
-    //                     Authorization: `Bearer ${localStorage.getItem('token')}`,
-    //                 }
-    //             })
-    //             const data = await response.json()
-    //             setTasks(data)
-    //         } catch (e) {
-    //             return e
-    //         }
-    //     }
-    //     fetchTasks()
-    // },[])
+    
 
     useEffect(() => {
         message(error)
