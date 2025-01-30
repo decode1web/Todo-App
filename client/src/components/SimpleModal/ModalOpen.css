@@ -1,0 +1,233 @@
+.modal-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.75);
+    opacity: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: opacity 0.3s;
+    color: #3d474d;
+    z-index: 999; 
+}
+
+.modal-wrapper-open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    width: 100%;
+    min-height: 100%;
+}
+
+.modal-content-open {
+    position: relative;
+    margin: 20px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    background: #fff;
+    padding: 0 20px 20px 20px;
+    transform: translateY(-50px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.modal-close-btn-open {
+    /* position: absolute;
+    top: 16px;
+    right: 16px; */
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-close-btn-open:hover {
+    transform: scale(1.3);
+}
+
+
+/* OPEN MODAL TRANSITION */
+
+.modal-open.modal--entering-open,
+.modal-open.modal--entered-open {
+    opacity: 1;
+}
+
+.modal--entering-open .modal-content-open,
+.modal--entered-open .modal-content-open {
+    transform: translateY(0);
+}
+
+/* CLOSE MODAL */
+
+.modal--exiting-open,
+.modal--exited-open {
+    opacity: 0;
+}
+
+.modal--exiting-open .modal-content-open,
+.modal--exited-open .modal-content-open {
+    transform: translateY(-50px);
+}
+
+.modal-headers {
+    padding: 20px 0;
+    /* border-bottom: 1px solid #3d474d; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.modal-headers::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: 0;
+    border-bottom: 1px solid rgb(225, 228, 230);
+}
+
+.modal-headers .modal-completed-btn {
+    border: 1px solid #00aaff;
+    border-radius: 5px;
+    background: none;
+    padding: 10px 15px;
+    color: #00aaff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modal-headers .modal-completed-btn svg {
+    margin-right: 10px;
+}
+
+.modal-main {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.modal-task-description {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    position: relative;
+}
+
+.modal-description-autoexpand {
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    background: rgb(225, 228, 230);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+    resize: none;
+}
+
+.modal-description-autoexpand:focus {
+    outline: none;
+}
+
+.modal-save-desc {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px solid #00aaff;
+    color: #00aaff;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.modal-save-desc:hover {
+    background: #00aaff;
+    color: #fff;
+}
+
+.modal-task-description {
+    width: calc(100%-10px);
+    margin-top: 20px;
+    background: rgb(225, 228, 230);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.modal-description-edit {
+    background: none;
+    border: none;
+    color: red;
+    font-weight: 600;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.modal-description-edit:hover {
+    transform: scale(1.1);
+}
+
+.modal-task-description-line {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.modal-headers_status-btn {
+    display: flex;
+}
+
+.modal-headers_status-btn button {
+    margin-right: 5px;
+}
+
+.tasks-done .adding-list .done-line-title {
+    text-decoration: line-through;
+    position: relative;
+    padding-top: 40px;
+}
+
+.d-c-s {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    background: #b8fdb8;
+    color: #64f664;
+    font-weight: 600;
+}
+
+.d-c-s svg {
+    margin-left: 10px;
+    margin-right: 10px;
+}

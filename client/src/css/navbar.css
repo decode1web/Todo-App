@@ -1,0 +1,70 @@
+nav {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
+}
+
+nav .nav-wrapper {
+    width: 95%;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-wrapper .brand-logo {
+    font-size: 25px;
+    font-weight: 600;
+    color: #1f1e30;
+    padding: 5px 7px;
+    border-radius: 5px;
+    border: 2px solid #1f1e30;
+}
+
+nav .nav-wrapper ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+nav .nav-wrapper ul li .nav-logout {
+    width: 80px;
+    /* position: absolute;
+    right: 50px;
+    top: 20px; */
+    padding: 8px 12px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 10px;
+    background: #1a40ff;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+nav .nav-wrapper ul .nav-email {
+    color: #1f1e30;
+    font-weight: 600;
+}
+
+nav .nav-wrapper ul li .nav-logout:hover {
+    background: rgb(0 36 214);
+}
+
+nav .nav-wrapper ul li {
+    margin-right: 20px;
+}
+
+nav .nav-wrapper ul li a {
+    color: #1f1e30;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 200ms ease;
+}
+
+nav .nav-wrapper ul li a:hover {
+    border-bottom: 5 px solid #1a40ff;
+}

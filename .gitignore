@@ -1,0 +1,24 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Build directories
+build/
+dist/
+
+# Environment files
+.env
+
+# VS Code settings
+.vscode/
+
+# MacOS files
+.DS_Store
+
+# Linux files
+*~
+
+# Logs
+*.log
