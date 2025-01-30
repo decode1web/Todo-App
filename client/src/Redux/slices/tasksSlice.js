@@ -4,12 +4,8 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 export const fetchTasks = createAsyncThunk(
     'tasks/fetchTasks',
     async ({userId, token} , { rejectedWithValue }) => {
-        // const { request } = useHttp()
         try {
-            // return await request(`/api/tasks/user/${userId}`, 'GET', null, {
-            //     Authorization: `Bearer ${token}`
-            // })
-            const response = await fetch(`/api/tasks/user/${userId}`,{
+            const response = await fetch(`https://todo-app-2xd6.onrender.com/api/tasks/user/${userId}`,{
                 method: 'GET',
                 body: null,
                 headers: {
@@ -36,7 +32,7 @@ export const addTask = createAsyncThunk(
     'tasks/addTask',
     async ({title, userId, token, status}, {rejectedWithValue}) => {
         try {
-            const response = await fetch('/api/tasks/add', {
+            const response = await fetch('https://todo-app-2xd6.onrender.com/api/tasks/add', {
                 method: 'POST',
                 body: JSON.stringify({title, userId, status}),
                 headers: {
@@ -61,7 +57,7 @@ export const deleteTask = createAsyncThunk(
     'tasks/deleteTask',
     async ({taskId, token}, { rejectedWithValue }) => {
         try {
-            const response = await fetch(`/api/tasks/delete/${taskId}`, {
+            const response = await fetch(`https://todo-app-2xd6.onrender.com/api/tasks/delete/${taskId}`, {
                 method: 'DELETE',
                 body: null,
                 headers: {
@@ -84,7 +80,7 @@ export const updateTaskStatus = createAsyncThunk(
     'tasks/updateStatus',
     async ({taskId, status, token}, {rejectedWithValue}) => {
         try {
-            const response = await fetch(`/api/tasks/status/${taskId}`,{
+            const response = await fetch(`https://todo-app-2xd6.onrender.com/api/tasks/status/${taskId}`,{
                 method: 'PUT',
                 body: JSON.stringify({status}), // Отправляем новый статус
                 headers: {
