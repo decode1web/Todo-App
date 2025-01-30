@@ -3,7 +3,6 @@ const config = require("config")
 const mongoose = require("mongoose")
 const authRoutes = require("./routes/auth.routes")
 const taskRoute = require("./routes/tasks.routes")
-const path = require('path')
 const cors = require('cors')
 // Инициализация приложения
 const app = express()
@@ -17,15 +16,6 @@ app.use(express.json({ extended: true }))
 // Маршруты
 app.use("/api/auth", authRoutes)
 app.use("/api/tasks", taskRoute)
-
-
-if(process.env.NODE_ENV === 'production') {
-    app.use('/', express.static(path.join(__dirname, 'client', 'build')))
-
-    app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-    })
-}
 
 
 async function start() {
