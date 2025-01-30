@@ -6,8 +6,7 @@ import { Navbar } from './components/Navbar'
 import './App.css'
 import { Provider } from 'react-redux'
 import store from './Redux/store'
-// import 'materialize-css'
-// import 'materialize-css/dist/css/materialize.min.css'
+
 
 function App() {
   const {login, logout, token, userId} = useAuth()
