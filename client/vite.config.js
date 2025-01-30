@@ -12,5 +12,8 @@ export default defineConfig({
         secure: true,
       }
     }
+  },
+  build: {
+    outDir: 'build' // Изменяем dist на build
   }
 })
