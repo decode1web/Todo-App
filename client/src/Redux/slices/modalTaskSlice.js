@@ -5,7 +5,7 @@ export const fetchTaskById = createAsyncThunk(
     'modalTask/fetchTaskById',
     async ({taskId, token} , {rejectedWithValue}) => {
         try {
-            const response = await fetch(`/api/tasks/task/${taskId}`, {
+            const response = await fetch(`https://todo-app-2xd6.onrender.com/api/tasks/task/${taskId}`, {
                 method: 'GET',
                 body: null,
                 headers: {
@@ -29,7 +29,7 @@ export const updateTask = createAsyncThunk(
     'modalTask/updateTask',
     async ({ taskId, description, token}, {rejectedWithValue}) => {
         try {
-            const response = await fetch(`/api/tasks/task/${taskId}`, {
+            const response = await fetch(`https://todo-app-2xd6.onrender.com/api/tasks/task/${taskId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
