@@ -39,7 +39,7 @@ export const CreatePage = () => {
     const handleAddTask = async () => {
         try {
             // console.log(auth.userId)
-            const data = await request('/api/tasks', 'POST', {...newTask}, {
+            const data = await request('https://todo-app-2xd6.onrender.com/api/tasks', 'POST', {...newTask}, {
                 Authorization: `Bearer ${auth.token}`
             })
             message(data.message)
