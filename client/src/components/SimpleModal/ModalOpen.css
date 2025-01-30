@@ -166,7 +166,7 @@
 }
 
 .modal-task-description {
-    width: calc(100%-10px);
+    width: calc(100% - 10px);
     margin-top: 20px;
     background: rgb(225, 228, 230);
     padding: 10px;
